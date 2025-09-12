@@ -11,7 +11,7 @@
         justify-content: center;
         align-items: center;
         height: 100vh;
-        background: black;
+        background: white; /* Fondo blanco */
       }
       model-viewer {
         width: 80vw;
@@ -21,14 +21,14 @@
   </head>
   <body>
     <model-viewer 
-      src="folder.glb"
+      src="bichiden.glb"
       autoplay
-      animation-name="Animation"
       auto-rotate
       camera-controls
       shadow-intensity="1"
-      exposure="1"
-      ar>
+      exposure="1.2"
+      camera-orbit="0deg 75deg 2m"
+      field-of-view="30deg">
     </model-viewer>
   </body>
 </html>
