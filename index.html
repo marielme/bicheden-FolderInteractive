@@ -1,34 +1,28 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8">
-    <title>BichEden 3D</title>
-    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-    <style>
-      body {
-        margin: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        background: rgb(209, 209, 209); /* Background black */
-      }
-      model-viewer {
-        width: 80vw;
-        height: 80vh;
-      }
-    </style>
-  </head>
-  <body>
+<head>
+  <meta charset="UTF-8">
+  <title>Handpose Control for Model Viewer</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+  <script src="https://unpkg.com/ml5@1.2.2/dist/ml5.min.js"></script>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="container">
+    <div id="canvas-container"></div>
     <model-viewer 
+      id="model"
       src="folder.glb"
       autoplay
-      auto-rotate
       camera-controls
       shadow-intensity="1"
       exposure="1.2"
-      camera-orbit="0deg 75deg 2m"
-      field-of-view="30deg">
+      field-of-view="30deg"
+      pbr-metallic-roughness="0.5 0.5 0.5 1 0 1">
     </model-viewer>
-  </body>
+  </div>
+  <div id="cursor"></div>
+  <script src="main.js"></script>
+</body>
 </html>
